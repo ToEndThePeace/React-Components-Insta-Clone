@@ -44,6 +44,35 @@ const dummyData = [
                 text: "It that injustice"
             }
         ]
+    },
+    {
+        username: "Yu-Gi-Oh",
+        thumbnailUrl: 'https://store-images.s-microsoft.com/image/apps.65521.13510798882841398.868566d3-03d3-4266-988e-cdb33dfa37cc.e0188be6-76c6-425d-838d-1e24b7b788ff',
+        imageUrl: 'https://i.redd.it/v2b4g3ts1oj11.png',
+        likes: 68,
+        timestamp: "July 12th 2017, 12:03:59 am",
+        comments: [
+            {
+                username: "Yu-Gi-Oh",
+                text: "What do you think of my new decklist?"
+            },
+            {
+                username: "mynumber1fan",
+                text: "That's crazy I can't wait to try it"
+            },
+            {
+                username: "somehater123",
+                text: "Xiao Pei ripoff!"
+            },
+            {
+                username: "joey_wheeler",
+                text: "You'll never beat me with that!"
+            },
+            {
+                username: "kaiboi",
+                text: "Looks mediocre"
+            }
+        ]
     }
 ];
 
