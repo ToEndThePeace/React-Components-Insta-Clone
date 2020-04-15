@@ -7,7 +7,7 @@ import "./Comment.css";
 const CommentSection = (props) => {
   // Add state for the comments
   const [comments, setComments] = useState(props.comments);
-  const [newComment, setNewComment] = useState("");
+  const [newComment, setNewComment] = useState(null);
 
   const changeComment = (event) => {
     setNewComment(event.target.value);
@@ -17,9 +17,9 @@ const CommentSection = (props) => {
     setComments([
       ...comments,
       {
-        username: "Brandon",
-        text: newComment
-      },
+        "username": "Brandon",
+        "text": newComment
+      }
     ]);
     setNewComment("");
   };

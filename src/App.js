@@ -24,7 +24,9 @@ const App = () => {
   return (
     <div className="App">
       <SearchBar setSearchTerm={setSearchTerm} />
-      <PostsPage posts={getFilteredPosts} />
+      <PostsPage 
+        posts={getFilteredPosts}
+      />
     </div>
   );
 };
