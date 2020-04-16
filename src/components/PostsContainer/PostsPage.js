@@ -11,6 +11,7 @@ const PostsPage = (props) => {
       {props.posts.map((post) => {
         return <Post 
           post={post}
+          key={post.id}
         />;
       })}
     </div>

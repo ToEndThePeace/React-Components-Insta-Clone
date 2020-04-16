@@ -6,33 +6,40 @@ import "./Comment.css";
 
 const CommentSection = (props) => {
   // Add state for the comments
-  const [comments, setComments] = useState(props.comments);
-  const [newComment, setNewComment] = useState(null);
+  const [newComment, setNewComment] = useState("");
+  const { comments, commentHandler } = props;
+
+  let commentIndex = 0;
 
   const changeComment = (event) => {
     setNewComment(event.target.value);
   };
   const submitComment = (event) => {
     event.preventDefault();
-    setComments([
-      ...comments,
-      {
-        "username": "Brandon",
-        "text": newComment
-      }
-    ]);
+    commentHandler({
+      username: "Brandon",
+      text: newComment,
+      id: commentIndex
+    })
     setNewComment("");
   };
 
   return (
     <div>
-      {comments.map((comment) => {
-        return <Comment comment={comment} />;
-      })}
+      {
+        comments.map((comment) => {
+          commentIndex = commentIndex <= comment.id ? comment.id + 1 : commentIndex;
+          return <Comment 
+            comment={comment} 
+            key={comment.id}
+          />;
+        })
+      }
       <CommentInput
         changeComment={changeComment}
         submitComment={submitComment}
         comment={newComment}
+        commentIndex={commentIndex}
       />
     </div>
   );
